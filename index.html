@@ -207,16 +207,15 @@ button.link-button {
 </head>
 <body>
 <div class="container-fluid">
-	<center><img src="https://enxo.co/images/logo.png"></center>
-   	<br />
+
     	<div class="info-box">
     		<h2>Sorry this site has been blocked<h2>
-      		<h3>The site you were trying to reach is:  <span class="red">{{.URL}}</span></h3>
+      		<h3>The site you were trying to reach is:  <span class="red" id="url-list"></span></h3>
           	<h3>This site has been categorized as:  <span class="red">{{.Categories}}</span></h3>
 <!--          <h3>You are currently logged in as user:  <span class="red">{{.User}}</span></h3>-->
       <form method="POST" action="https://enxo.co/gf/blockpage/feedback">
 
-  <input type="hidden" name="url" value="{{.URL}}">
+  <input type="hidden" name="url" value="" id="url">
   <input type="hidden" name="user" value="{{.User}}">
   <input type="hidden" name="cat" value="{{.Categories}}">
   <input type="hidden" name="tally" value="{{.Tally}}">
@@ -230,5 +229,21 @@ button.link-button {
      
     </div>
   </div>
+	<script>
+	var urlParams;
+(window.onpopstate = function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+})();
+		var url = atob(urlParams.url)
+		document.getElementById('url-list').innerHTML = url
+		document.getElementById('url').value = url
 </body>
 </html>
