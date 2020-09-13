@@ -1,251 +1,49 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Blocked by Pluckeye</title>
 <style>
-
-/* latin-ext */
-@font-face {
-  font-family: 'Barlow';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Barlow Regular'), local('Barlow-Regular'), url(https://fonts.gstatic.com/s/barlow/v1/7cHpv4kjgoGqM7E_Ass52Hs.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Barlow';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Barlow Regular'), local('Barlow-Regular'), url(https://fonts.gstatic.com/s/barlow/v1/7cHpv4kjgoGqM7E_DMs5.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* cyrillic-ext */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local('PT Sans Italic'), local('PTSans-Italic'), url(https://fonts.gstatic.com/s/ptsans/v9/jizYRExUiTo99u79D0e0ysmIEDQ.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local('PT Sans Italic'), local('PTSans-Italic'), url(https://fonts.gstatic.com/s/ptsans/v9/jizYRExUiTo99u79D0e0w8mIEDQ.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local('PT Sans Italic'), local('PTSans-Italic'), url(https://fonts.gstatic.com/s/ptsans/v9/jizYRExUiTo99u79D0e0ycmIEDQ.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local('PT Sans Italic'), local('PTSans-Italic'), url(https://fonts.gstatic.com/s/ptsans/v9/jizYRExUiTo99u79D0e0x8mI.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'), url(https://fonts.gstatic.com/s/ptsans/v9/jizdRExUiTo99u79D0e8fOydIhUdwzM.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'), url(https://fonts.gstatic.com/s/ptsans/v9/jizdRExUiTo99u79D0e8fOydKxUdwzM.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'), url(https://fonts.gstatic.com/s/ptsans/v9/jizdRExUiTo99u79D0e8fOydIRUdwzM.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'), url(https://fonts.gstatic.com/s/ptsans/v9/jizdRExUiTo99u79D0e8fOydLxUd.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/jizaRExUiTo99u79D0-ExdGM.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/jizaRExUiTo99u79D0aExdGM.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/jizaRExUiTo99u79D0yExdGM.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/jizaRExUiTo99u79D0KExQ.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'), url(https://fonts.gstatic.com/s/ptsans/v9/jizfRExUiTo99u79B_mh0OOtLQ0Z.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'), url(https://fonts.gstatic.com/s/ptsans/v9/jizfRExUiTo99u79B_mh0OqtLQ0Z.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'), url(https://fonts.gstatic.com/s/ptsans/v9/jizfRExUiTo99u79B_mh0OCtLQ0Z.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'), url(https://fonts.gstatic.com/s/ptsans/v9/jizfRExUiTo99u79B_mh0O6tLQ.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-body {
-  font-family: 'Barlow';
-  background-color: #3f5267;
-
-}
-.container-fluid {
-  border-radius: 5px;
-}
-
-.info-box {
-  background-color: #f1faff;
-  border: 1px solid black;
-  max-height: 600px;
-  position: relative;
-  padding: 20px;
-  text-align: center;
-  font-family: 'Barlow';
-  border-radius: 5px;
-}
-
-h1 {
-  font-size: 5vw;
-  font-family: 'PT Sans';
-  font-weight: 100;
-}
-
-.logo {
-  font-family: 'Barlow';
-  font-weight: 300;
-}
-
-.red {
-  color: #f6392b;
-}
-
-h2 {
-  font-size: 3vw;
-  font-weight: 300;
-  text-align: center;
-}
-
-h3 {
-  font-size: 1.5vw;
-  
-}
-
-button.link-button {
-    background: #f6392b;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-family: 'Barlow';
-}
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  span.blocked {
+    color: #09476b;
+  }
+  a.button.button-allow {
+    border: 2px solid #09476b;
+    padding: 25px 50px;
+    margin-top: 25px;
+    color: #09476b;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .button-allow:hover {
+    color: white !important;
+    background: #09476b;
+  }
 </style>
-  
-</head>
-<body>
-<div class="container-fluid">
-
-    	<div class="info-box">
-    		<h2>Sorry this site has been blocked by Pluckeye<h2>
-			<p>If you believe this site was blocked by mistake, please make sure to check your pluckeye configuration to ensure that the site is allowed.</p>
-      		<h3>The site you were trying to reach is:  <span class="red" id="url-list"></span></h3>
-          	<h3>This site has been categorized as:  <span class="red">{{.Categories}}</span></h3>
-<!--          <h3>You are currently logged in as user:  <span class="red">{{.User}}</span></h3>-->
-      <form method="POST" action="https://enxo.co/gf/blockpage/feedback">
-
-  <input type="hidden" name="url" value="" id="url">
-  <input type="hidden" name="user" value="{{.User}}">
-  <input type="hidden" name="cat" value="{{.Categories}}">
-  <input type="hidden" name="tally" value="{{.Tally}}">
-  <input type="hidden" name="scores" value="{{.Scores}}">
-
-  <button type="submit" name="submit_param" value="submit_value" class="link-button">
-    <h2>Don't block this site<br />in the future</h1>
-  </button>
-</form>
-
-     
-    </div>
+<div class="container">
+  <img src="https://www.pluckeye.net/pluckeye.svg" alt="Pluckeye logo" />
+  <div>
+    <p>Sorry this page has been blocked by Pluckeye</p>
+    <p>The site you were trying to access is: <span class="blocked" id="url-list"></span>
   </div>
-	<script>
-	var urlParams;
-(window.onpopstate = function () {
-    var match,
-        pl     = /\+/g,  // Regex for replacing addition symbol with a space
-        search = /([^&=]+)=?([^&]*)/g,
-        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
-        query  = window.location.search.substring(1);
-
-    urlParams = {};
-    while (match = search.exec(query))
-       urlParams[decode(match[1])] = decode(match[2]);
-})();
-		var url = atob(urlParams.url)
-		document.getElementById('url-list').innerHTML = url
-		document.getElementById('url').value = url
-		</script>
-</body>
-</html>
+  <p>You can click the button below to add this site to your allow list</p>
+  <a class="button button-allow">Allow this site</a>
+</div>
+<script>
+  var urlParams;
+  (window.onpopstate = function () {
+      var match,
+          pl     = /\+/g,  // Regex for replacing addition symbol with a space
+          search = /([^&=]+)=?([^&]*)/g,
+          decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+          query  = window.location.search.substring(1);
+  
+      urlParams = {};
+      while (match = search.exec(query))
+         urlParams[decode(match[1])] = decode(match[2]);
+  })();
+      var url = atob(urlParams.url)
+      document.getElementById('url-list').innerHTML = url
+  
+</script>
